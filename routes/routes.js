@@ -26,7 +26,7 @@ routes.get("/pedidos/:pessoaId/:pedidoId/update",acessarProprioRecurso,PedidoCon
 
 routes.get("/pedidos",admin,PedidoController.getAllPedidos)
 routes.get("/pedidos/:pessoaId",acessarProprioRecurso,PedidoController.getAll)
-routes.get("/pedidos/:pessoaId/:pedidoId",acessarProprioRecurso, PedidoController.getById)
+routes.get("/pedidos/:pessoaId/:pedidoId",admin, PedidoController.getById)
 routes.post("/pedidos/:pessoaId",admin,PedidoController.create)
 routes.put("/pedidos/:pessoaId/:pedidoId",acessarProprioRecurso,PedidoController.update)
 routes.delete("/pedidos/:pessoaId/:pedidoId",acessarProprioRecurso,PedidoController.delete)
